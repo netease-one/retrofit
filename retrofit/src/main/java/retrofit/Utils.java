@@ -104,9 +104,10 @@ final class Utils {
     // Prevent API interfaces from extending other interfaces. This not only avoids a bug in
     // Android (http://b.android.com/58753) but it forces composition of API declarations which is
     // the recommended pattern.
-    if (service.getInterfaces().length > 0) {
-      throw new IllegalArgumentException("Interface definitions must not extend other interfaces.");
-    }
+    // for one by harry 2015-10-09
+//    if (service.getInterfaces().length > 0) {
+//      throw new IllegalArgumentException("Interface definitions must not extend other interfaces.");
+//    }
   }
 
   static class SynchronousExecutor implements Executor {
